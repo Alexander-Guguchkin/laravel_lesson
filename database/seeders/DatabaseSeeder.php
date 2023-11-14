@@ -38,9 +38,16 @@ class DatabaseSeeder extends Seeder
         //     "texts"=>Str::random(10),
         //     "description"=>Str::random(10)
         // ]);
-        $this->call([
-            inser_user_table::class,
-            inser_profile_table::class,
+        // $this->call([
+        //     inser_user_table::class,
+        //     inser_profile_table::class,
+        // ]);
+        DB::table('cities')->insert([
+            'name'=>'Tambow',
+            'country_id'=>1
+        ]);
+        DB::table('countries')->insert([
+            'name'=>'Russia',
         ]);
     }
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\ostController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController12;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,3 +41,4 @@ use App\Http\Controllers\ProfileController;
 // Route::get('/', [UserController12::class, 'showUser']);
 Route::get('/getUserInfos', [UserController::class, 'getUserInfos']);
 Route::get('/getProfileUser', [ProfileController::class, 'getProfileUser']);
+Route::get('/getCountriesCity', [CategoryController::class, 'getCountries']);
