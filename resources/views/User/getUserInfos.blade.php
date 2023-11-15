@@ -9,7 +9,7 @@
     @foreach ($user->getAttributes() as $q => $value)
         <h2>{{$q}} : {{$value}}</h2>
     @endforeach --}}
-    @foreach ($user->getAttributes() as $us => $value)
+    {{-- @foreach ($user->getAttributes() as $us => $value)
         <h2>{{ $us }}</h2>
     @endforeach
     @foreach ($user->profile->getAttributes() as $q => $value)
@@ -33,5 +33,6 @@
                 <td>{{ $us }}</td>
             @endforeach
         </tr>
-    </table>
+    </table> --}}
+    {{$user}}
 </x-layout>
