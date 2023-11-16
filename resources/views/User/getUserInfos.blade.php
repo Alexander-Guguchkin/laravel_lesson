@@ -35,4 +35,13 @@
         </tr>
     </table> --}}
     {{$user}}
+    @foreach ($user->getAttributes() as $u )
+        <h2>{{$u}}</h2>
+    @endforeach
+    @foreach ($user->city->getAttributes() as $u )
+        <h2>{{$u}}</h2>
+    @endforeach
+    @foreach ($user->position->getAttributes() as $u )
+        <h2>{{$u}}</h2>
+    @endforeach
 </x-layout>

@@ -22,8 +22,9 @@ class UserController extends Controller
         ]);
     }
     public function getInfoUPC(){
-        $user = User::all();
-        $queryC =  $user->city
+        $user = User::find(1);
+        $queryC =  $user->city;
+        $queryPos =  $user->position;
         return view('User.getUserInfos', ['user' => $user]);
     }
 }
