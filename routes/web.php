@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController12;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\RoleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,3 +44,4 @@ Route::get('/getUserInfos', [UserController::class, 'getUserInfos']);
 Route::get('/getProfileUser', [ProfileController::class, 'getProfileUser']);
 Route::get('/getCountriesCity', [CategoryController::class, 'getCountries']);
 Route::get('/getCountriesCityUser', [UserController::class, 'getInfoUPC']);
+Route::get('/getRoleUser', [RoleController::class, 'getRoleUser']);

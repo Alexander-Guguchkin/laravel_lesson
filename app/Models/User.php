@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Profile;
 use App\Models\Position;
 use App\Models\City;
+use App\Models\Role;
 
 class User extends Model
 {
@@ -20,5 +21,8 @@ class User extends Model
     }
     public function position(){
         return $this->belongsTo(Position::class);
+    }
+    public function roles(){
+        return $this->belongsToMany(Role::class);
     }
 }

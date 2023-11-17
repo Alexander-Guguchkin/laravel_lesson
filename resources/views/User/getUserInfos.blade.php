@@ -44,4 +44,10 @@
     @foreach ($user->position->getAttributes() as $u )
         <h2>{{$u}}</h2>
     @endforeach
+    @foreach ($user->roles as $u )
+        @foreach ($u->getAttributes() as $u1)
+            <h2>{{$u1}}</h2>
+        @endforeach
+    @endforeach
+
 </x-layout>
