@@ -25,4 +25,8 @@ class UserController extends Controller
         $user = User::find(1);
         return view('User.getUserInfos', ['user' => $user]);
     }
+    public function getAllInfo(){
+        $query = User::with(['profile', 'roles'])->get();
+        return view('User.getAllInfoView', ['query' => $query]);
+    }
 }

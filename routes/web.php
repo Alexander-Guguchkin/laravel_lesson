@@ -45,3 +45,4 @@ Route::get('/getProfileUser', [ProfileController::class, 'getProfileUser']);
 Route::get('/getCountriesCity', [CategoryController::class, 'getCountries']);
 Route::get('/getCountriesCityUser', [UserController::class, 'getInfoUPC']);
 Route::get('/getRoleUser', [RoleController::class, 'getRoleUser']);
+Route::get('/getAllInfo', [UserController::class, 'getAllInfo']);

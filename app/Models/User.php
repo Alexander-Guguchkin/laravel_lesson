@@ -8,6 +8,7 @@ use App\Models\Profile;
 use App\Models\Position;
 use App\Models\City;
 use App\Models\Role;
+use App\Models\Country;
 
 class User extends Model
 {
@@ -24,5 +25,8 @@ class User extends Model
     }
     public function roles(){
         return $this->belongsToMany(Role::class);
+    }
+    public function country (){
+        return $this->belongsTo(Country::class);
     }
 }
