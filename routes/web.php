@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController12;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\FormController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,3 +47,7 @@ Route::get('/getCountriesCity', [CategoryController::class, 'getCountries']);
 Route::get('/getCountriesCityUser', [UserController::class, 'getInfoUPC']);
 Route::get('/getRoleUser', [RoleController::class, 'getRoleUser']);
 Route::get('/getAllInfo', [UserController::class, 'getAllInfo']);
+Route::get('/Form', [FormController::class, 'form']);
+Route::get('/result', [FormController::class, 'getResult']);
+Route::get('/FormPost', [FormController::class, 'formPost']);
+Route::post('/resultPost', [FormController::class, 'getresultPost']);
