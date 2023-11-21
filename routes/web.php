@@ -52,4 +52,4 @@ Route::get('/Form', [FormController::class, 'form']);
 Route::get('/result', [FormController::class, 'getResult']);
 Route::get('/FormPost', [FormController::class, 'formPost']);
 Route::post('/resultPost', [FormController::class, 'getresultPost']);
-Route::match(['get', 'post'], '/CityCountryForm', [CityCountryFormmController::class]);
+Route::match(['get', 'post'], '/CityCountryForm', [CityCountryFormmController::class, 'cceFormForm']);
