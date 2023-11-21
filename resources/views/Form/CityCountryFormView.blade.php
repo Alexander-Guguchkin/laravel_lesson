@@ -2,10 +2,9 @@
     <x-slot:title>
         CityCountryForm
     </x-slot>
-        <h2>{{$city}}</h2>
-        <h2>{{$country}}</h2>
-        {{-- {{$data}} --}}
-        <form action="" method="Post">
+    {{-- {{$city}}
+    {{$country}} --}}
+        <form action="" method="post">
             @csrf
             <input type="text" name="city">
             <input type="text" name="country">
