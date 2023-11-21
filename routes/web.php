@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\CityCountryFormmController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,3 +52,4 @@ Route::get('/Form', [FormController::class, 'form']);
 Route::get('/result', [FormController::class, 'getResult']);
 Route::get('/FormPost', [FormController::class, 'formPost']);
 Route::post('/resultPost', [FormController::class, 'getresultPost']);
+Route::match(['get', 'post'], '/CityCountryForm', [CityCountryFormmController::class]);
