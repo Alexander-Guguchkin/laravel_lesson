@@ -2,8 +2,7 @@
     <x-slot:title>
         Form
     </x-slot>
-    <form a
-ction="/FormResult" method="get">
+    <form action="/FormResult" method="get">
         <input type="text" name="username">
         <input type="text" name="password">
         <input type="submit">
