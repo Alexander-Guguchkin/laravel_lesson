@@ -34,6 +34,13 @@ class FormController extends Controller
     }
     public function Forms1Result(Request $request){
         $onlyData = $request->only(['username', 'login']);
-        return view('Form.Forms1ResultView', ['onlyData' => $onlyData]);
+        $ExceptData = $request->except(['email', 'password']);
+        $alldata = $request->all();
+        return view('Form.Forms1ResultView', ['onlyData' => $onlyData, 'ExceptData' => $ExceptData, 'alldata' => $alldata ]);
     }
+    public function f12Result(Request $request, $id = null, $login = null){
+        $alldata = $request->all();
+        return view('Form.f12ResultView', ['id' => $id, 'login' => $login, 'alldata' => $alldata]);
+    }
+
 }

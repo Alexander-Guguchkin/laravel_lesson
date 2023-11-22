@@ -6,4 +6,7 @@
     @foreach ($onlyData as $item =>$value)
       <h2>{{$item}}: {{$value}}</h2>
     @endforeach
+    @foreach ($ExceptData as $item => $value)
+        <h2>{{$item}}: {{$value}}</h2>
+    @endforeach
 </x-layout>

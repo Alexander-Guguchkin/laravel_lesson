@@ -10,6 +10,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\CityCountryFormmController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,3 +56,7 @@ Route::get('/Form', [FormController::class, 'Forms']);
 Route::get('/FormResult', [FormController::class, 'FormsResult']);
 Route::get('/Forms1', [FormController::class, 'Forms1']);
 Route::get('/Forms1Result', [FormController::class, 'Forms1Result']);
+Route::get('/f12', function(){
+    return view('Form.f12View');
+});
+Route::post('/f12Result/{id}/{login}', [FormController::class, 'f12Result']);
