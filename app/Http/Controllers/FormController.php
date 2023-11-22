@@ -22,4 +22,18 @@ class FormController extends Controller
         $user = [$request->input('name'), $request->input('age'), $request->input('salary')];
         return view('Form.resultPostsView', ['user' => $user]);
     }
+    public function Forms(){
+        return view('Form.FormView');
+    }
+    public function FormsResult(Request $request){
+        $alldata = $request->all();
+        return view('Form.FormResultView', ['alldata' => $alldata]);
+    }
+    public function Forms1(){
+        return view('Form.Forms1View');
+    }
+    public function Forms1Result(Request $request){
+        $onlyData = $request->only(['username', 'login']);
+        return view('Form.Forms1ResultView', ['onlyData' => $onlyData]);
+    }
 }
