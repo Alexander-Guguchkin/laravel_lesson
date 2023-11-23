@@ -6,14 +6,6 @@
     <title>{{$title}}</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-<style>
-    .r{
-        background: red;
-    }
-    .tr,td, th{
-        border: 1px solid black;
-    }
-</style>
 <body>
     <p>Это с loyout</p>
     {{$slot}}

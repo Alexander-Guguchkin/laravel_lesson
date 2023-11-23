@@ -3,8 +3,18 @@
         Result
     </x-slot>
     <table>
-        <tr><th>текст заголовка</th><th>текст заголовка</th></tr> <!--ряд с ячейками заголовков-->
-        <tr><td>данные</td><td>данные</td></tr> <!--ряд с ячейками тела таблицы-->
+        <tr>
+            @foreach ($alldata as $item => $value)
+                <th>{{$item}}</th>
+            @endforeach
+            <th>Actions</th>
+        </tr> <!--ряд с ячейками заголовков-->
+
+        <tr>
+            @foreach ($alldata as $item)
+                <td>{{$item}}</td>
+            @endforeach
+        </tr> <!--ряд с ячейками тела таблицы-->
     </table>
     {{-- @dd($alldata) --}}
 </x-layout>
