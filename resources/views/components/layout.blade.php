@@ -6,8 +6,14 @@
     <title>{{$title}}</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-<body>
-    <p>Это с loyout</p>
-    {{$slot}}
-</body>
+    <body>
+        <div class="wrapper">
+            <x-header />
+            <x-main.menu.nav />
+            <x-main-content/>
+            <p>Это с loyout</p>
+            {{$slot}}
+            <x-footer.info />
+        </div>
+    </body>
 </html>
