@@ -7,7 +7,7 @@
         <input type="text" name="surname" class="inp" placeholder="Фамилия">
         <input type="email" name="email" class="inp" placeholder="Почта">
         <input type="number" name="age" class="inp" placeholder="Возраст">
-        <input type="number" name="phone" class="inp" placeholder="Номер телефона">
+        <input type="tel" name="phone" class="inp" placeholder="Номер телефона">
         <input type="text" name="city" class="inp" placeholder="Город">
         <div class="wraper__button inp">
             <input type="submit">
