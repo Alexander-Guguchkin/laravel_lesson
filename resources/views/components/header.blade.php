@@ -1,4 +1,5 @@
 <header>
     header
-    <x-logo>
+    <x-logo />
+    <x-contacts-info/>
 </header>
