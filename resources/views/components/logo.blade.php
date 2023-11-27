@@ -1,3 +1,4 @@
 <div class="logo">
-    logotip
+    {{$alt}}
+    {{$title}}
 </div>
