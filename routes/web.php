@@ -11,7 +11,8 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\CityCountryFormmController;
 use App\Http\Controllers\FORMUSERController;
-
+use App\View\Components\User;
+use App\View\Components\Info;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,3 +66,17 @@ Route::get('/FormUser', function () {
     return view('FormUsers.FormUserView');
 });
 Route::get('/Result', [FORMUSERController::class, 'FormUser']);
+Route::get('/m1', function () {
+    return view("M1View");
+});
+Route::get('/m2', function () {
+    return view("M2View");
+});
+Route::get('/user', function () {
+    $user = new User();
+    return $user->render();
+});
+Route::get('/info', function(){
+    $info = new Info;
+    return $user->render();
+});
