@@ -1,12 +1,12 @@
 <header>
     header
-    <x-logo>
+    <x-log>
         <x-slot:alt>
             LogHeaders
         </x-slot>
         <x-slot:title>
             Дополнительная информация
         </x-slot>
-    </x-logo>
+    </x-log>
     <x-contacts-info/>
 </header>

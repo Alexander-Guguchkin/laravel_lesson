@@ -14,6 +14,7 @@ use App\Http\Controllers\FORMUSERController;
 use App\View\Components\User;
 use App\View\Components\Info;
 use App\View\Components\Post;
+use App\View\Components\Logo;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -84,4 +85,8 @@ Route::get('/info', function(){
 Route::get('/post', function(){
     $user = new Post();
     return $user->render();
+});
+Route::get('/logo', function () {
+    $logo = new Logo("https://img.razrisyika.ru/kart/94/372802-logo-6.jpg", "Логотип");
+    return $logo->render();
 });

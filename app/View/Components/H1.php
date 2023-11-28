@@ -6,17 +6,15 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Logo extends Component
+class H1 extends Component
 {
-    public $src;
-    public $alt;
+    public $title;
     /**
      * Create a new component instance.
      */
-    public function __construct($src, $alt)
+    public function __construct($title)
     {
-        $this->src = $src;
-        $this->alt = $alt;
+        $this->title = $title;
     }
 
     /**
@@ -24,6 +22,6 @@ class Logo extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.logo', ['src' => $this->src, 'alt' => $this->alt]);
+        return view('components.h1', ['title' => $this->title]);
     }
 }

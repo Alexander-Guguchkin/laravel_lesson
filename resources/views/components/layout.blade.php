@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="discription" content="@yield('metaDescription')">
-    <title> {{$title}}</title>
+    <title> {{$title}} </title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,9 @@
             <x-main.sidebar.left.info-block/>
             <x-main-content/>
             <x-info>info1</x-info>
-            <x-log><img src="https://img.razrisyika.ru/kart/94/372802-logo-6.jpg" alt="Логотип" class="logImgs"></x-log>
+            <x-logo src = "https://img.razrisyika.ru/kart/94/372802-logo-6.jpg" alt = "Логотип"/>
+            <x-log><img src = "https://img.razrisyika.ru/kart/94/372802-logo-6.jpg" alt="Логотип" class="logImgs"></x-log>
+            <x-h1 :title="$title"/>
             <p>Это с loyout</p>
             {{$slot}}
             <x-footer.info />

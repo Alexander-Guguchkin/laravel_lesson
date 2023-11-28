@@ -1,4 +1,6 @@
 <div class="logo">
     {{$alt}}
-    {{$title}}
+    {{-- {{$title}} --}}
+    {{$src}}
+    <img src="{{$src}}" alt="{{$alt}}"  style = "width: 250px; height: 250px;">
 </div>
