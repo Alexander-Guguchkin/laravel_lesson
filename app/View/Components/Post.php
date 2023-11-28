@@ -5,8 +5,9 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use App\Models\User;
 
-class Info extends Component
+class Post extends Component
 {
     /**
      * Create a new component instance.
@@ -21,8 +22,7 @@ class Info extends Component
      */
     public function render(): View|Closure|string
     {
-        $info = ["str","str1", "str2", "str3", "str4"];
-        return view('components.info', ["info" => $info]);
+        $user = User::all();
+        return view('components.post', ['user' => $user]);
     }
-
 }

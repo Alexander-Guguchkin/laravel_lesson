@@ -13,6 +13,7 @@ use App\Http\Controllers\CityCountryFormmController;
 use App\Http\Controllers\FORMUSERController;
 use App\View\Components\User;
 use App\View\Components\Info;
+use App\View\Components\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -78,5 +79,9 @@ Route::get('/user', function () {
 });
 Route::get('/info', function(){
     $info = new Info;
+    return $info->render();
+});
+Route::get('/post', function(){
+    $user = new Post();
     return $user->render();
 });

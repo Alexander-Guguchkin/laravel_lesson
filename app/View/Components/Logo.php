@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Info extends Component
+class Logo extends Component
 {
     /**
      * Create a new component instance.
@@ -21,8 +21,6 @@ class Info extends Component
      */
     public function render(): View|Closure|string
     {
-        $info = ["str","str1", "str2", "str3", "str4"];
-        return view('components.info', ["info" => $info]);
+        return view('components.logo');
     }
-
 }
