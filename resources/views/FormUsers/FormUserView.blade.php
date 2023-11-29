@@ -2,16 +2,37 @@
     <x-slot:title>
         FormUserView
     </x-slot>
-    <form action="/Result" method="get">
-        <input type="text" name="name" class="inp" placeholder="Имя">
-        <input type="text" name="surname" class="inp" placeholder="Фамилия">
-        <input type="email" name="email" class="inp" placeholder="Почта">
-        <input type="number" name="age" class="inp" placeholder="Возраст">
-        <input type="number" name="phone" class="inp" placeholder="Номер телефона">
-        <input type="text" name="city" class="inp" placeholder="Город">
-        <div class="wraper__button inp">
-            <input type="submit">
-            <button>Очистить</button>
-        </div>
-    </form>
+    <div class="wraper_form">
+        <form action="/Result" method="get" class="forms obj1">
+            <div class="wraperr__inp">
+                <input type="text" name="name" class="obj1 btn1" placeholder="Имя">
+            </div>
+
+            <div class="wraperr__inp">
+                <input type="text" name="surname" class="obj1 btn1" placeholder="Фамилия">
+            </div>
+
+            <div class="wraperr__inp">
+                <input type="email" name="email" class="obj1 btn1" placeholder="Почта">
+            </div>
+
+            <div class="wraperr__inp">
+                <input type="number" name="age" class="obj1 btn1" placeholder="Возраст">
+            </div>
+
+            <div class="wraperr__inp">
+                <input type="tel" name="phone" class="obj1 btn1" placeholder="Номер телефона">
+            </div>
+
+            <div class="wraperr__inp">
+                <input type="text" name="city" class="obj1 btn1" placeholder="Город">
+            </div>
+
+            <div class="wraper__button">
+                <input type="submit"  class="obj1 btn1 fg1" >
+                <button class="obj1 btn1 fg1"> Очистить</button>
+            </div>
+        </form>
+    </div>
+
 </x-layout>
