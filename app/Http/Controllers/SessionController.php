@@ -55,7 +55,12 @@ public function dateSession(Request $request){
     }
 
     public function dSTwices(Request $request){
-
+        $request->session()->put('q', '10');
+    }
+    public function getSessionTwices(Request $request){
+        $result = $request->session()->pull('q');
+        dump($result);
+        dump($request->session());
     }
 
 }

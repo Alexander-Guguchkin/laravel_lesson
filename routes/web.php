@@ -98,3 +98,5 @@ Route::get('/sessionUpdate', [SessionController::class, 'updateCounter']);
 Route::get('/Supdate', [SessionController::class, 'indexUpdateSession']);
 Route::get('/dateSessions', [SessionController::class, 'dateSession']);
 Route::get('/deleteSession', [SessionController::class, 'delSession']);
+Route::get('/dSTwices', [SessionController::class, 'dSTwices']);
+Route::get('/getSessionTwices', [SessionController::class, 'getSessionTwices']);
