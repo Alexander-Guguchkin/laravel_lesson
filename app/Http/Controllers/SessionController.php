@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class SessionController extends Controller
 {
     public function sessionIndex(Request $request){
-        $request->session()->put('assign', 1);
+        $request->session()->put('onceVars', 1);
     }
     public function getSession(Request $request){
         $value = $request->session()->get('assign');
@@ -49,8 +49,12 @@ public function dateSession(Request $request){
            // Выводим время первого захода на экран
           dump($firstVisitTime);
        }
-       public function delSession(Request $request){
+    public function delSession(Request $request){
         $request->session()->forget('posCounter');
+
+    }
+
+    public function dSTwices(Request $request){
 
     }
 
