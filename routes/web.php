@@ -11,10 +11,12 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\CityCountryFormmController;
 use App\Http\Controllers\FORMUSERController;
+use App\Http\Controllers\SessionController;
 use App\View\Components\User;
 use App\View\Components\Info;
 use App\View\Components\Post;
 use App\View\Components\Logo;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -90,3 +92,9 @@ Route::get('/logo', function () {
     $logo = new Logo("https://img.razrisyika.ru/kart/94/372802-logo-6.jpg", "Логотип");
     return $logo->render();
 });
+Route::get('/sessionPut', [SessionController::class, 'sessionIndex']);
+Route::get('/session', [SessionController::class, 'getSession']);
+Route::get('/sessionUpdate', [SessionController::class, 'updateCounter']);
+Route::get('/Supdate', [SessionController::class, 'indexUpdateSession']);
+Route::get('/dateSessions', [SessionController::class, 'dateSession']);
+Route::get('/deleteSession', [SessionController::class, 'delSession']);
