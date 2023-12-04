@@ -115,3 +115,8 @@ Route::get('/getNumRedirect1', [SessionController::class, 'getNumRedirect1']);
 Route::get('/getNumRedirect1', function (){
     return view('getNumRedirect2');
 });
+Route::get('/userFormRedirect', function(){
+    return view('userFormsView');
+});
+Route::get('/redirectUsers', [SessionController::class, 'redirectUsers']);
+Route::get('/spisokUser/{users}', [SessionController::class, 'spisokUser']);
