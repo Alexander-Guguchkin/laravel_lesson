@@ -68,11 +68,12 @@ public function dateSession(Request $request){
     }
     public function setTimeSessionVar(Request $request) {
         if($request->session()->exists('time')){
-            $result1 = $request->session()->get('time');
+            $result = $request->session()->get('time');
         }
         else{
             $date = date("H:i:s");
-            $result2 = $request->session()->put('time', $date);
+            $result = $request->session()->put('time', $date);
         }
+        dump($result);
     }
 }
