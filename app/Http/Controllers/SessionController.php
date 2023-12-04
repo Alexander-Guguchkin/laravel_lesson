@@ -94,11 +94,10 @@ public function dateSession(Request $request){
     }
     public function getNumRedirect1(Request $request){
         if ($request->input('number') > 0 && $request->input('number') < 10){
-            return riderect('/getNumRedirect2');
+            return redirect('/getNumRedirect2');
         }
         else{
-
+            dump('число от 1-10');
         }
-
     }
 }

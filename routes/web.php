@@ -111,3 +111,7 @@ Route::get('/getNumRiderect2', [SessionController::class, 'getNumRiderect2']);
 Route::get('/getRedirectForm', function (){
     return view('getNumRedirectForm');
 });
+Route::get('/getNumRedirect1', [SessionController::class, 'getNumRedirect1']);
+Route::get('/getNumRedirect1', function (){
+    return view('getNumRedirect2');
+});
