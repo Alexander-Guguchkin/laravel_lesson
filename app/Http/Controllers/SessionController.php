@@ -62,6 +62,8 @@ public function dateSession(Request $request){
         dump($result);
         dump($request->session());
     }
-
+    public function getAllSession(Request $request) {
+            $allData = $request->session()->all();
+            return view('getAllSessionView', ['allData' => $allData]);
+    }
 }
-
