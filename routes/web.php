@@ -101,3 +101,4 @@ Route::get('/deleteSession', [SessionController::class, 'delSession']);
 Route::get('/dSTwices', [SessionController::class, 'dSTwices']);
 Route::get('/getSessionTwices', [SessionController::class, 'getSessionTwices']);
 Route::get('/getAllSession', [SessionController::class, 'getAllSession']);
+Route::get('/setTimeSessionVar', [SessionController::class, 'setTimeSessionVar']);

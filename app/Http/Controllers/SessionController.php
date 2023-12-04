@@ -66,4 +66,13 @@ public function dateSession(Request $request){
             $allData = $request->session()->all();
             return view('getAllSessionView', ['allData' => $allData]);
     }
+    public function setTimeSessionVar(Request $request) {
+        if($request->session()->exists('time')){
+            $result1 = $request->session()->get('time');
+        }
+        else{
+            $date = date("H:i:s");
+            $result2 = $request->session()->put('time', $date);
+        }
+    }
 }
