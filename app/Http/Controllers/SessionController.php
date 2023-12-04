@@ -86,4 +86,19 @@ public function dateSession(Request $request){
         $sessionVar = session('info1');
         dump($sessionVar);
     }
+    public  function  getRedirect1(){
+        return redirect('/getRiderect2');
+    }
+    public  function  getRedirect2(){
+        return view('getRedirectView');
+    }
+    public function getNumRedirect1(Request $request){
+        if ($request->input('number') > 0 && $request->input('number') < 10){
+            return riderect('/getNumRedirect2');
+        }
+        else{
+
+        }
+
+    }
 }

@@ -104,3 +104,10 @@ Route::get('/getAllSession', [SessionController::class, 'getAllSession']);
 Route::get('/setTimeSessionVar', [SessionController::class, 'setTimeSessionVar']);
 Route::get('/setArrSession', [SessionController::class, 'setArrSession']);
 Route::get('/getSessions', [SessionController::class, 'getSessions']);
+Route::get('/getRiderect1', [SessionController::class, 'getRedirect1']);
+Route::get('/getRiderect2', [SessionController::class, 'getRedirect2']);
+Route::get('/getNumRiderect1', [SessionController::class, 'getNumRiderect1']);
+Route::get('/getNumRiderect2', [SessionController::class, 'getNumRiderect2']);
+Route::get('/getRedirectForm', function (){
+    return view('getNumRedirectForm');
+});
