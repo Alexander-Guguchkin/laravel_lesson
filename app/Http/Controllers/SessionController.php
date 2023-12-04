@@ -76,4 +76,14 @@ public function dateSession(Request $request){
         }
         dump($result);
     }
+    public function setArrSession(Request $request){
+        $request->session()->put('arrSession',[1,2,3,4,5,6]);
+        $request->session()->push('arrSession', '7,8,9,10');
+        dump($request->session()->get('arrSession'));
+    }
+    public function getSessions(Request $request){
+        session(['info1' => 'value1']);
+        $sessionVar = session('info1');
+        dump($sessionVar);
+    }
 }
