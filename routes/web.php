@@ -137,3 +137,5 @@ Route::get('/show1', [ResponseController::class, 'show1']);
 Route::get('/show2', [ResponseController::class, 'show2']);
 Route::get('/setCookie', [CookieController::class, 'setCookie']);
 Route::get('/getCookie', [CookieController::class, 'getCookie']);
+Route::get('/Main', [CookieController::class, 'Main']);
+Route::get('/Ochered', [CookieController::class, 'Ochered']);
