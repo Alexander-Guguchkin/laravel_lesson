@@ -12,10 +12,13 @@ use App\Http\Controllers\FormController;
 use App\Http\Controllers\CityCountryFormmController;
 use App\Http\Controllers\FORMUSERController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\ResponseController;
+use App\Http\Controllers\CookieController;
 use App\View\Components\User;
 use App\View\Components\Info;
 use App\View\Components\Post;
 use App\View\Components\Logo;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -120,3 +123,17 @@ Route::get('/userFormRedirect', function(){
 });
 Route::get('/redirectUsers', [SessionController::class, 'redirectUsers']);
 Route::get('/spisokUser/{users}', [SessionController::class, 'spisokUser']);
+Route::get('/c1', function (){
+    return view('c1View');
+});
+Route::get('/redirectc1c2/{id}', [SessionController::class, 'getShow']);
+Route::get('/c2/{id}', function (){
+    return view('c2View');
+})->name('c2');
+Route::get('/getDwas', [ResponseController::class, 'getDwas']);
+Route::get('/getChetiri', [ResponseController::class, 'getChetiri']);
+Route::get('/getChetiris', [ResponseController::class, 'getChetiris']);
+Route::get('/show1', [ResponseController::class, 'show1']);
+Route::get('/show2', [ResponseController::class, 'show2']);
+Route::get('/setCookie', [CookieController::class, 'setCookie']);
+Route::get('/getCookie', [CookieController::class, 'getCookie']);

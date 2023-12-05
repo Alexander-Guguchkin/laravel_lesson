@@ -100,27 +100,19 @@ public function dateSession(Request $request){
             dump('число от 1-10');
         }
     }
-
-    // public function redirectUsers (Request $request){
-    //     $result1 = $request->input('user');
-    //     return redirect()->action([SessionController::class, 'spisokUser'], ['user' => $result1]);
-
-    // }
-    // public function spisokUser($user,Request $request ){
-    //     $res1 = $request->all();
-    //     dump($res1);
-    // }
     public function redirectUsers(Request $request){
         $result1 = $request->input('users');
-        dump($result1);
         if ($result1) {
             return redirect()->action([SessionController::class, 'spisokUser'], ['users' => $result1]);
         }
     }
 
-    public function spisokUser(Request $request, $users){
+    public function spisokUser($users){
         $res1 = $users;
         dump($res1);
 
+    }
+    public function getShow($id){
+        return redirect()->route('c2', ['id' => $id]);
     }
 }
